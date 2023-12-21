@@ -1,3 +1,9 @@
+/*
+ * Kata Option 1 - Quiz
+ * Name: Evan Schubert
+ * Created: 12/20/2023
+ */
+
 package com.example.quizkata;
 
 import javafx.application.Application;

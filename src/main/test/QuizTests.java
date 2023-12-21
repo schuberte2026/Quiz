@@ -1,3 +1,8 @@
+/*
+ * Kata Option 1 - Quiz
+ * Name: Evan Schubert
+ * Created: 12/20/2023
+ */
 /**
  * Tests consisted of running various text files of trivia questions through the program. These will
  * be committed to the repo for viewing (directory TestFiles).

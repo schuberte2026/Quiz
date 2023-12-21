@@ -1,3 +1,9 @@
+/*
+ * Kata Option 1 - Quiz
+ * Name: Evan Schubert
+ * Created: 12/20/2023
+ */
+
 package com.example.quizkata;
 
 import javafx.animation.KeyFrame;
@@ -54,8 +60,6 @@ public class QuizController {
     @FXML
     private TextField resultBox;
 
-    @FXML
-    private Button loadFile;
 
     private int score = 0;
     private Timeline timeline;
