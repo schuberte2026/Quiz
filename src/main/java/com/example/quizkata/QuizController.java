@@ -134,7 +134,7 @@ public class QuizController {
             clearRadioButtons();
             String line;
             while ((line = bufferedReader.readLine()) != null && line.trim().isEmpty()) {
-                //this skips the blank lines in the text files
+                // This skips the blank lines in the text files.
             }
 
             if (line != null) {
@@ -143,7 +143,7 @@ public class QuizController {
                     displayQuestion(parts[1]);
                     readAndDisplayOptions();
 
-                    correctAnswer = bufferedReader.readLine().substring(8).trim(); //reads correct answers, trims spaces
+                    correctAnswer = bufferedReader.readLine().substring(8).trim(); // This reads the correct answers, and trims spaces.
 
                     startTimer();
                 }
@@ -168,7 +168,7 @@ public class QuizController {
      * @throws IOException - if format is incorrect.
      */
     private void readAndDisplayOptions() throws IOException {
-        // Display options in the corresponding display boxes
+        // Displays the options in the corresponding display boxes.
         optionOneDisplayBox.setText(bufferedReader.readLine().substring(12).replace(":", ""));
         optionTwoDisplayBox.setText(bufferedReader.readLine().substring(12).replace(":", ""));
         optionThreeDisplayBox.setText(bufferedReader.readLine().substring(12).replace(":", ""));
@@ -187,7 +187,7 @@ public class QuizController {
                 handleTimeout();
             } else if (timerSeconds <= 5) {
 
-                Timerbox.setStyle("-fx-text-fill: red;"); //changes text color when time less than 5 sec
+                Timerbox.setStyle("-fx-text-fill: red;"); // Changes text color of the Timerbox when the time is less than 5 seconds.
             }
 
             timerSeconds--;
@@ -242,7 +242,7 @@ public class QuizController {
         timeline.stop();
 
         try {
-            //checks the option that is selected and compares it with the correct answer
+            // Checks the option that is selected and compares it with the correct answer.
             RadioButton selectedOption = null;
 
             if (optionOne.isSelected()) {
@@ -256,7 +256,7 @@ public class QuizController {
             }
 
             if (selectedOption != null && selectedOption.getText().trim().equals(correctAnswer)) {
-                score += 10; // Increase the score by 10 for a correct answer
+                score += 10; // Increases the score by 10 for a correct answer.
             }
 
             scoreBox.setText(String.valueOf(score));
@@ -266,7 +266,7 @@ public class QuizController {
             handleIOException(e);
         } finally {
             timerSeconds = 10;
-            Timerbox.setStyle("-fx-text-fill: black;"); //resets text color to black
+            Timerbox.setStyle("-fx-text-fill: black;"); // Resets text color to black when timer restarts.
         }
     }
 }
