@@ -3,11 +3,14 @@ package com.example.quizkata;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -46,35 +49,60 @@ public class QuizController {
     private TextField scoreBox;
 
     @FXML
-    TextField Timerbox;
+    private TextField Timerbox;
 
     @FXML
-    TextField resultBox;
+    private TextField resultBox;
+
+    @FXML
+    private Button loadFile;
 
     private int score = 0;
     private Timeline timeline;
     private int timerSeconds = 10;
     private String correctAnswer;
 
-    //will need to replace filename for each new one for now,
-    // ran out of time to make it more customizable
-    private String filePath = "C:\\Users\\schuberte\\OneDrive - Milwaukee School of Engineering\\DSA\\Week 1\\QuizKata\\TestFiles\\quizQnAfinal.txt";
+    private boolean stopBeforeLoadNextQuestion = false;
+
+    // setter method for testing flag
+    public void setStopBeforeLoadNextQuestion(boolean stopBeforeLoadNextQuestion) {
+        this.stopBeforeLoadNextQuestion = stopBeforeLoadNextQuestion;
+    }
 
     private BufferedReader bufferedReader;
 
     /**
-     * Method that initializes a BufferedReader on the file to be read from.
+     * Method to handle file loading.
+     * @param filePath - The path of the file to load.
+     * @throws IOException if an IO error occurs during file loading.
+     */
+    public void loadFile(String filePath) throws IOException {
+        bufferedReader = new BufferedReader(new FileReader(filePath));
+
+        if(stopBeforeLoadNextQuestion) {
+            return;
+        }
+        loadNextQuestion();
+    }
+
+    /**
+     * Method that initializes prompts a file chooser and a BufferedReader on the file to be read from.
      */
     @FXML
-    public void initialize() {
-        try {
-            bufferedReader = new BufferedReader(new FileReader(filePath));
-            loadNextQuestion();
-        } catch (IOException e) {
-            handleIOException(e);
-        } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("Incorrect file format. Ensure file format is correct.");
-            System.exit(0);
+    private void handleLoadFile() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Quiz File");
+        File selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null) {
+            try {
+                loadFile(selectedFile.getAbsolutePath());
+            } catch (IOException e) {
+                handleIOException(e);
+            } catch (StringIndexOutOfBoundsException e) {
+                System.out.println("Incorrect file format. Ensure file format is correct.");
+                System.exit(0);
+            }
         }
     }
 
