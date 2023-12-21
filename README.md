@@ -4,8 +4,8 @@ GitHub readme.
 This program was created with the JavaFX framework.
 I'm not familiar with working with APIs as of right now, so I made the program take in a text file 
 and loaded the application based on the contents of that file. I have done numerous tests to ensure
-that the application should handle files with the incorrect format. Though, for best results, this 
-program was created to work with the following format.
+that the application should handle files with both correct and incorrect formats. 
+Though, for best results, this program was created to work with the following format.
 
 
 Question: <question>
