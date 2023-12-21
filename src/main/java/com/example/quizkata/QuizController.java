@@ -9,7 +9,6 @@ package com.example.quizkata;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
@@ -68,12 +67,16 @@ public class QuizController {
 
     private boolean stopBeforeLoadNextQuestion = false;
 
-    // setter method for testing flag
+    private BufferedReader bufferedReader;
+
+
+    /**
+     * Setter method for testing flag
+     * @param stopBeforeLoadNextQuestion - boolean determining if method should stop.
+     */
     public void setStopBeforeLoadNextQuestion(boolean stopBeforeLoadNextQuestion) {
         this.stopBeforeLoadNextQuestion = stopBeforeLoadNextQuestion;
     }
-
-    private BufferedReader bufferedReader;
 
     /**
      * Method to handle file loading.
@@ -204,9 +207,7 @@ public class QuizController {
         } catch (IOException e) {
             handleIOException(e);
         } finally {
-            // Reset the timerSeconds for the next question
             timerSeconds = 10;
-            // Reset the text color to black
             Timerbox.setStyle("-fx-text-fill: black;");
         }
     }
@@ -225,7 +226,7 @@ public class QuizController {
 
     /**
      * Prints stack trace for the IO exception.
-     * @param e
+     * @param e - IO exception that was thrown.
      */
     private void handleIOException(IOException e) {
         resultBox.setText("Please ensure text" +
