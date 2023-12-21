@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizkata.QuizController">
+   <top>
+      <VBox prefHeight="96.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUESTION:" textAlignment="CENTER" wrappingWidth="603.841796875">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <TextField fx:id="questionBox" editable="false" prefHeight="41.0" prefWidth="553.0" />
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="183.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="100.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <RadioButton fx:id="optionOne" mnemonicParsing="false" onAction="#handleAnswerSelection" text="Option One">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="100.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <RadioButton fx:id="optionTwo" mnemonicParsing="false" onAction="#handleAnswerSelection" text="Option Two">
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="100.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <RadioButton fx:id="optionThree" mnemonicParsing="false" onAction="#handleAnswerSelection" text="Option Three">
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <RadioButton fx:id="optionFour" mnemonicParsing="false" onAction="#handleAnswerSelection" text="Option Four">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RESULT: ">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="resultBox" editable="false" prefHeight="87.0" prefWidth="143.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="411.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="optionOneDisplayBox" editable="false" prefHeight="45.0" prefWidth="400.0">
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="optionTwoDisplayBox" editable="false" prefWidth="400.0">
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="optionThreeDisplayBox" editable="false" prefWidth="400.0">
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="optionFourDisplayBox" editable="false" prefWidth="400.0">
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SCORE: ">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="scoreBox" editable="false" prefHeight="42.0" prefWidth="84.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TIME LEFT: ">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="Timerbox" editable="false" prefHeight="42.0" prefWidth="68.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
+

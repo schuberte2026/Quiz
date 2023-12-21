@@ -1,0 +1,6 @@
+Question: In the TV show "Friends," what is the name of Ross and Monica's dog when they were kids?
+Option One: Buster
+Option Two: Sparky
+Option Three: Marcel
+Option Four: Chi-Chi
+Answer:

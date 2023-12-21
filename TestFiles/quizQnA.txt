@@ -1,0 +1,69 @@
+Question: In the TV show "Friends," what is the name of Ross and Monica's dog when they were kids?
+Option One: Buster
+Option Two: Sparky
+Option Three: Marcel
+Option Four: Chi-Chi
+Answer: Option Two
+
+Question: Which Marvel superhero is known for wielding a hammer named Mjolnir?
+Option One: Iron Man
+Option Two: Thor
+Option Three: Captain America
+Option Four: Black Widow
+Answer: Option Two
+
+Question: What is the name of the fictional African country in the movie "Black Panther"?
+Option One: Zamunda
+Option Two: Wakanda
+Option Three: Genovia
+Option Four: Elbonia
+Answer: Option Two
+
+Question: In the movie "The Wizard of Oz," what is the color of Dorothy's magical slippers?
+Option One: Silver
+Option Two: Gold
+Option Three: Ruby Red
+Option Four: Emerald Green
+Answer: Option Three
+
+Question: Which pop singer is known as the "Queen of Pop"?
+Option One: Beyoncé
+Option Two: Madonna
+Option Three: Taylor Swift
+Option Four: Rihanna
+Answer: Option Two
+
+Question: In the animated TV show "The Simpsons," what is the name of Homer's next-door neighbor?
+Option One: Ned Flanders
+Option Two: Barney Gumble
+Option Three: Moe Szyslak
+Option Four: Apu Nahasapeemapetilon
+Answer: Option One
+
+Question: What is the real name of the character played by Keanu Reeves in the "Matrix" trilogy?
+Option One: Neo
+Option Two: Morpheus
+Option Three: Trinity
+Option Four: Cypher
+Answer: Option One
+
+Question: Which 2017 horror film is based on a novel by Stephen King and features a demonic dancing clown?
+Option One: Insidious
+Option Two: The Conjuring
+Option Three: It
+Option Four: Annabelle
+Answer: Option Three
+
+Question: Who played the role of Jack Dawson in the movie "Titanic"?
+Option One: Brad Pitt
+Option Two: Leonardo DiCaprio
+Option Three: Tom Hanks
+Option Four: Johnny Depp
+Answer: Option Two
+
+Question: In the TV series "Stranger Things," what is Eleven's favorite snack?
+Option One: Eggo Waffles
+Option Two: Doritos
+Option Three: Pop Tarts
+Option Four: Pringles
+Answer: Option One
