@@ -1,4 +1,6 @@
 This program serves to complete the Option 1: Quiz kata.
+Please refer to the raw version of this text file, as the formatting appears to be wrong on the 
+GitHub readme.
 This program was created with the JavaFX framework.
 I'm not familiar with working with APIs as of right now, so I made the program take in a text file 
 and loaded the application based on the contents of that file. I have done numerous tests to ensure
