@@ -15,7 +15,7 @@ public class QuizDriver extends Application {
 
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(QuizDriver.class.getResource("Quiz-View.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 500);
         stage.setTitle("Quiz Master");
         stage.setScene(scene);
         stage.show();
